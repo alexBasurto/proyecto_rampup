@@ -1,0 +1,80 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box; /*cuidado con esta regla...*/
+    font-family: 'Michroma', sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+section#nombre_page {
+    background-color: #00B4D8;
+}
+
+h1, h2 {
+    text-align: left;
+    display: inline;
+    padding: 5px;
+}
+
+h2 {
+    text-transform: lowercase;
+}
+
+nav > ul > li {
+    display: flex;
+    flex-direction: row;
+}
+
+nav > ul > li {
+    list-style-type: none;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    line-height: 35px;
+}
+
+nav > ul > li > a:hover {
+    background-color: #00B4D8;
+    font-size: 26px;
+}
+
+nav > ul > li > a:not(:hover) {
+    
+    background-color: white;
+    font-size: 20px;
+}
+
+nav > ul > li > a {
+    transition: background-color 0.8s;
+}
+
+img#foto_portada {
+    width: 100%;
+}
+
+section#texto_home {
+    padding: 10%;
+    position: absolute;
+    top: 25%;
+}
+
+section#texto_home > p {
+    background-color: #CAF0F8BB;
+    margin: 15px;
+}
+
+section#texto_home > p#texto_bienvenida {
+    font-size: 35px;
+}
+
+img.img_bienvenida {
+    width: 100%;
+}
