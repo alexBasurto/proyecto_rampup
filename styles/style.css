@@ -4,6 +4,11 @@
     font-family: 'Michroma', sans-serif;
 }
 
+body {
+    background-color: #CAF0F8;
+    width: 100%;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -15,45 +20,54 @@ section#nombre_page {
     background-color: #00B4D8;
 }
 
-h1, h2 {
+section#nombre_page > h1, section#nombre_page > h2 {
     text-align: left;
     display: inline;
     padding: 5px;
 }
 
-h2 {
+section#nombre_page > h2 {
     text-transform: lowercase;
 }
 
-nav > ul > li {
+header > nav > ul {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1%;
 }
 
-nav > ul > li {
+header > nav > ul > li {
     list-style-type: none;
 }
 
-nav > ul > li > a {
+header > nav > ul > li > a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
     line-height: 35px;
+    border: 1px solid gray;
+    padding: 5px;
 }
 
-nav > ul > li > a:hover {
+header > nav > ul > li > a:hover {
     background-color: #00B4D8;
+    /* font-size: 26px; */ /*El cambio de tamaño con hover da problemas que no sé solucionar*/
+}
+
+header > nav > ul > li > a:not(:hover) {
+    
+    background-color: white;
+    /* font-size: 20px; */
+}
+
+header > nav > ul > li > a:active {
+    background-color: yellow;
     font-size: 26px;
 }
 
-nav > ul > li > a:not(:hover) {
-    
-    background-color: white;
-    font-size: 20px;
-}
-
-nav > ul > li > a {
+header > nav > ul > li > a {
     transition: background-color 0.8s;
+    border-radius:  10% 90% 9% 91% / 80% 11% 89% 20%;
 }
 
 img#foto_portada {
@@ -61,20 +75,56 @@ img#foto_portada {
 }
 
 section#texto_home {
-    padding: 10%;
-    position: absolute;
-    top: 25%;
+    padding: 14% 10% 14% 4%;
+    display: flex;
+    flex-direction: column;
 }
 
 section#texto_home > p {
-    background-color: #CAF0F8BB;
     margin: 15px;
+    text-indent: 8%;
+    text-align: justify;
 }
 
-section#texto_home > p#texto_bienvenida {
-    font-size: 35px;
+section#texto_home > h1#texto_bienvenida {
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: yellow;
+    border-radius: 10% 90% 9% 91% / 80% 11% 89% 20%;
+    box-shadow: 0 0 15px yellow;
 }
 
 img.img_bienvenida {
     width: 100%;
+    border-radius: 5%;
+}
+
+footer {
+    background-color: #00B4D8;
+    text-align: center;
+    height: 20%;
+}
+
+footer > nav > ul {
+    padding: 0;
+}
+
+footer > nav > ul > li {
+    list-style-type: none;
+}
+
+footer > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+footer section#redes {
+    margin-top: 4%;
+}
+
+footer section#redes > a > img {
+    width: 20px;
+    margin: 0% 5%;
 }
