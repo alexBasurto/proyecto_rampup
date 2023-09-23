@@ -103,17 +103,57 @@ section#texto_intro > h1#encabezado_intro {
 }
 
 article.experiencia {
-    border: 1px solid black;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
+article.experiencia_txt {
+    margin: 0;
+}
+
+article.ascension {
+    background-color: lightcoral;
+    color: darkred;
+    border-color: darkred;
+}
+
+article.treking {
+    background-color: #90E0EF;
+    color: #03045E;
+    border-color: #03045E;
+}
+
+article.curso {
+    background-color: yellowgreen;
+    color: darkgreen;
+    border-color: darkgreen;
 }
 
 article.experiencia_txt > span {
     display: block;
     justify-content: left;
+    margin: 0;
+    font-size: 10px;
+}
+
+span.tipo_experiencia {
+    text-transform: uppercase;
+    padding-bottom: 5px;
 }
 
 img.img_bienvenida {
     width: 100%;
     /* border-radius: 5%; */
+}
+
+img.experiencia {
+    width: 50%;
+    margin: 0;
+    border-radius: 22px 0px 0px 22px;
 }
 
 footer {
@@ -164,6 +204,12 @@ footer section#redes > a > img {
 
 @media only screen and (min-width: 361px) {
 
+}
+
+@media only screen and (min-width: 500px) {
+    article.experiencia_txt > span {
+        font-size: 14px;
+    }
 }
 
 /*Media queries desde 642px, para que no se divida el título*/
