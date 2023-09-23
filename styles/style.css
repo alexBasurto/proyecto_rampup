@@ -20,9 +20,15 @@ section#nombre_page {
     background-color: #00B4D8;
 }
 
-section#nombre_page > h1, section#nombre_page > h2 {
+section#nombre_page > h1{
     text-align: left;
     display: inline;
+    padding: 5px;
+}
+
+section#nombre_page > h2 {
+    text-align: left;
+    display: block;
     padding: 5px;
 }
 
@@ -47,46 +53,46 @@ header > nav > ul > li > a {
     line-height: 35px;
     border: 1px solid gray;
     padding: 5px;
+    border-radius:  10% 90% 9% 91% / 80% 11% 89% 20%;
 }
 
 header > nav > ul > li > a:hover {
     background-color: #00B4D8;
+    transition: background-color 0.8s;
     /* font-size: 26px; */ /*El cambio de tamaño con hover da problemas que no sé solucionar*/
 }
 
 header > nav > ul > li > a:not(:hover) {
     
     background-color: white;
+    transition: background-color 0.8s;
     /* font-size: 20px; */
 }
 
 header > nav > ul > li > a:active {
     background-color: yellow;
-    font-size: 26px;
-}
-
-header > nav > ul > li > a {
-    transition: background-color 0.8s;
-    border-radius:  10% 90% 9% 91% / 80% 11% 89% 20%;
+    transition: background-color 0.3s;
+    /* font-size: 26px; */
 }
 
 img#foto_portada {
     width: 100%;
 }
 
-section#texto_home {
-    padding: 14% 10% 14% 4%;
+section#texto_intro {
+    padding: 14% 0%;
     display: flex;
     flex-direction: column;
 }
 
-section#texto_home > p {
+section#texto_intro > p {
     margin: 15px;
+    padding: 4% 8% 4% 4%;
     text-indent: 8%;
     text-align: justify;
 }
 
-section#texto_home > h1#texto_bienvenida {
+section#texto_intro > h1#encabezado_intro {
     font-size: 25px;
     text-align: center;
     display: flex;
@@ -96,9 +102,18 @@ section#texto_home > h1#texto_bienvenida {
     box-shadow: 0 0 15px yellow;
 }
 
+article.experiencia {
+    border: 1px solid black;
+}
+
+article.experiencia_txt > span {
+    display: block;
+    justify-content: left;
+}
+
 img.img_bienvenida {
     width: 100%;
-    border-radius: 5%;
+    /* border-radius: 5%; */
 }
 
 footer {
@@ -120,6 +135,20 @@ footer > nav > ul > li > a {
     color: white;
 }
 
+footer > nav > ul > li > a:hover{
+    color: yellow;
+    transition: color 0.8s;
+}
+
+footer > nav > ul > li > a:not(:hover){
+    color: white;
+    transition: color 0.8s;
+}
+
+footer > nav > ul > li > a:active{
+    color: yellow;
+}
+
 footer section#redes {
     margin-top: 4%;
 }
@@ -127,4 +156,37 @@ footer section#redes {
 footer section#redes > a > img {
     width: 20px;
     margin: 0% 5%;
+}
+
+/*Media queries desde
+361px (Samsung Galaxy S21) hasta
+800px (Samsung Galaxy Tab A7 Portrait)*/
+
+@media only screen and (min-width: 361px) {
+
+}
+
+/*Media queries desde 642px, para que no se divida el título*/
+
+@media only screen and (min-width: 642px) {
+    section#nombre_page > h1, section#nombre_page > h2{
+        text-align: left;
+        display: inline;
+        padding: 5px;
+    }
+}
+
+/*Media queries desde
+801px (Samsung Galaxy Tab A7 Portrait) hasta
+1280px (Samsung Galaxy Tab A7 Landscape)*/
+
+@media only screen and (min-width: 801px) {
+
+}
+
+/*Media queries*/
+/*de 1281px (Samsung Galaxy Tab A7 Landscape)
+en adelante (desktop)*/
+@media only screen and (min-width: 1281px) {
+
 }
