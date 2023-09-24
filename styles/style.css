@@ -1,6 +1,7 @@
 * {
     margin: 0 auto;
-    box-sizing: border-box; /*cuidado con esta regla...*/
+    box-sizing: border-box;
+    /*cuidado con esta regla...*/
     font-family: 'Michroma', sans-serif;
 }
 
@@ -20,56 +21,57 @@ section#nombre_page {
     background-color: #00B4D8;
 }
 
-section#nombre_page > h1{
+section#nombre_page>h1 {
     text-align: left;
     display: inline;
     padding: 5px;
 }
 
-section#nombre_page > h2 {
+section#nombre_page>h2 {
     text-align: left;
     display: block;
     padding: 5px;
 }
 
-section#nombre_page > h2 {
+section#nombre_page>h2 {
     text-transform: lowercase;
 }
 
-header > nav > ul {
+header>nav>ul {
     display: flex;
     flex-wrap: wrap;
     padding: 1%;
 }
 
-header > nav > ul > li {
+header>nav>ul>li {
     list-style-type: none;
 }
 
-header > nav > ul > li > a {
+header>nav>ul>li>a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
     line-height: 35px;
     border: 1px solid gray;
     padding: 5px;
-    border-radius:  10% 90% 9% 91% / 80% 11% 89% 20%;
+    border-radius: 10% 90% 9% 91% / 80% 11% 89% 20%;
 }
 
-header > nav > ul > li > a:hover {
+header>nav>ul>li>a:hover {
     background-color: #00B4D8;
     transition: background-color 0.8s;
-    /* font-size: 26px; */ /*El cambio de tamaño con hover da problemas que no sé solucionar*/
+    /* font-size: 26px; */
+    /*El cambio de tamaño con hover da problemas que no sé solucionar*/
 }
 
-header > nav > ul > li > a:not(:hover) {
-    
+header>nav>ul>li>a:not(:hover) {
+
     background-color: white;
     transition: background-color 0.8s;
     /* font-size: 20px; */
 }
 
-header > nav > ul > li > a:active {
+header>nav>ul>li>a:active {
     background-color: yellow;
     transition: background-color 0.3s;
     /* font-size: 26px; */
@@ -85,14 +87,18 @@ section#texto_intro {
     flex-direction: column;
 }
 
-section#texto_intro > p {
+section#texto_intro>video {
+    width: 100%;
+}
+
+section#texto_intro>p {
     margin: 15px;
     padding: 4% 8% 4% 4%;
     text-indent: 8%;
     text-align: justify;
 }
 
-section#texto_intro > h1#encabezado_intro {
+section#texto_intro>h1#encabezado_intro {
     font-size: 25px;
     text-align: center;
     display: flex;
@@ -106,13 +112,17 @@ article.experiencia {
     border: 3px solid black;
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
     border-radius: 25px;
     margin-top: 30px;
 }
 
 article.experiencia_txt {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
 }
 
 article.ascension {
@@ -133,16 +143,21 @@ article.curso {
     border-color: darkgreen;
 }
 
-article.experiencia_txt > span {
+article.experiencia_txt>span {
     display: block;
-    justify-content: left;
     margin: 0;
+    margin-left: 5px;
     font-size: 10px;
 }
 
-span.tipo_experiencia {
+h4.tipo_experiencia {
     text-transform: uppercase;
     padding-bottom: 5px;
+    margin-left: 5px;
+}
+
+h6.nombre_experiencia {
+    margin-left: 5px;
 }
 
 img.img_bienvenida {
@@ -153,39 +168,123 @@ img.img_bienvenida {
 img.experiencia {
     width: 50%;
     margin: 0;
-    border-radius: 22px 0px 0px 22px;
+    border-radius: 22px 22px 0px 22px;
 }
+
+/*formulario contacto*/
+
+form#contacto>fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #90E0EF;
+    border: none;
+    border-radius: 10% 90% 9% 91% / 80% 11% 89% 20%;
+}
+
+form#contacto legend {
+    font-size: 25px;
+}
+
+form#contacto>fieldset>label {
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+form#contacto>fieldset>input,
+form#contacto>fieldset>select,
+form#contacto>fieldset>textarea {
+    width: 90%;
+}
+
+span#sexo {
+    display: block;
+}
+
+form#contacto>fieldset>select>optgroup#ascensiones {
+    background-color: lightcoral;
+}
+
+form#contacto>fieldset>select>optgroup#trekings {
+    background-color: #90E0EF;
+}
+
+form#contacto>fieldset>select>optgroup#cursos {
+    background-color: yellowgreen;
+}
+
+form#contacto>fieldset>select>optgroup#ascensiones>option {
+    background-color: darkred;
+    color: white;
+}
+
+form#contacto>fieldset>select>optgroup#trekings>option {
+    background-color: #03045E;
+    color: white;
+}
+
+form#contacto>fieldset>select>optgroup#cursos>option {
+    background-color: darkgreen;
+    color: white;
+}
+
+form#contacto>fieldset>input#experiencia_previa {
+    width: 15px;
+    margin-left: 5%;
+}
+
+form#contacto>fieldset>input#enviar,
+form#contacto>fieldset>input#limpiar {
+    width: 50%;
+    margin: 15px 0px 0px 0px;
+}
+
+form#contacto>fieldset>input#enviar:hover,
+form#contacto>fieldset>input#limpiar:hover {
+    background-color: #03045E;
+    color: white;
+}
+
+form#contacto>fieldset>input#enviar:active,
+form#contacto>fieldset>input#limpiar:active {
+    background-color: darkred;
+    color: white;
+}
+
+
+/*footer todas las páginas*/
 
 footer {
     background-color: #00B4D8;
     text-align: center;
     height: 20%;
+    padding-bottom: 25px;
 }
 
-footer > nav > ul {
+footer>nav>ul {
     padding: 0;
 }
 
-footer > nav > ul > li {
+footer>nav>ul>li {
     list-style-type: none;
 }
 
-footer > nav > ul > li > a {
+footer>nav>ul>li>a {
     text-decoration: none;
     color: white;
 }
 
-footer > nav > ul > li > a:hover{
+footer>nav>ul>li>a:hover {
     color: yellow;
     transition: color 0.8s;
 }
 
-footer > nav > ul > li > a:not(:hover){
+footer>nav>ul>li>a:not(:hover) {
     color: white;
     transition: color 0.8s;
 }
 
-footer > nav > ul > li > a:active{
+footer>nav>ul>li>a:active {
     color: yellow;
 }
 
@@ -193,46 +292,88 @@ footer section#redes {
     margin-top: 4%;
 }
 
-footer section#redes > a > img {
+footer section#redes>a>img {
     width: 20px;
     margin: 0% 5%;
 }
 
-/*Media queries desde
-361px (Samsung Galaxy S21) hasta
-800px (Samsung Galaxy Tab A7 Portrait)*/
+/*
+MEDIA QUERY
+previo: moviles tamaño medio, 375px
+1º MQ: agrandar un poco texto tarjetas experiencias
+*/
 
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 400px) {
 
-}
-
-@media only screen and (min-width: 500px) {
-    article.experiencia_txt > span {
+    article.experiencia_txt>span,
+    article.experiencia_txt>h6 {
         font-size: 14px;
     }
 }
 
-/*Media queries desde 642px, para que no se divida el título*/
+/*
+2º MQ: para que no se divida el título
+*/
 
 @media only screen and (min-width: 642px) {
-    section#nombre_page > h1, section#nombre_page > h2{
+
+    section#nombre_page>h1,
+    section#nombre_page>h2 {
         text-align: left;
         display: inline;
         padding: 5px;
     }
+
+    section#texto_intro {
+        padding: 7% 0%;
+    }
 }
 
-/*Media queries desde
-801px (Samsung Galaxy Tab A7 Portrait) hasta
-1280px (Samsung Galaxy Tab A7 Landscape)*/
+/*
+3º MQ: tablets
+index, somos: texto y fotos.
+experiencias: 2 tarjetas por fila.
+*/
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 768px) {
+    section#texto_intro {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    article.experiencia {
+        width: 49%;
+    }
+
+    section#texto_intro {
+        padding: 5% 0%;
+    }
 
 }
 
-/*Media queries*/
-/*de 1281px (Samsung Galaxy Tab A7 Landscape)
-en adelante (desktop)*/
+/*
+4º MQ: desktop
+nav superior: elementos a la izquierda
+experiencias: 4 tarjetas por fila
+contacto: 2 columnas, texto y formulario
+*/
+
 @media only screen and (min-width: 1281px) {
 
+    article.experiencia {
+        width: 23%;
+    }
+
+    article.experiencia_txt > span, article.experiencia_txt > h4, article.experiencia_txt > h6 {
+        font-size: 12px;
+        padding: 2px 10px;
+    }
+
+    article.tarjeta_top {
+        margin-top: 0;
+    }
+
+    section#texto_intro {
+        padding: 3% 0%;
+    }
 }
