@@ -1,3 +1,6 @@
+POSIBLE VERSIÓN FINAL.
+Pendiente: flexbox en main de index.html y somos.html. Habría que crear nuevas cajas(section) para ir separando texto de imágenes.
+
 POSIBLES NOMBRES
 
 - MT ACHIEVMENTS Compañía de guías de monataña
