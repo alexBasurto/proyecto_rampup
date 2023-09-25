@@ -30,72 +30,84 @@
         </nav>
     </header>
     <main id="contacto">
-        <section id="texto_intro" class="txt_contacto">
-            <h1 id="encabezado_intro">¡Contáctanos!</h1>
-            <p>En MT SUCCESS, valoramos tu interés y estamos aquí para responder a todas tus preguntas, recibir tus comentarios y ayudarte a planificar la aventura de montaña de tus sueños. Estamos comprometidos en brindarte la mejor experiencia posible, desde el momento en que nos contactas hasta que regresas de tu expedición.</p>
-            <p>No dudes en ponerte en contacto con nuestro equipo. Ya sea que necesites información adicional sobre nuestras experiencias en la montaña, detalles sobre nuestros cursos de escalada o simplemente desees comunicarte con nosotros, estamos aquí para atenderte. Utiliza el formulario de contacto a continuación o los detalles de contacto proporcionados para hablar con nosotros. Tu próxima aventura en la montaña comienza aquí. ¡Esperamos escucharte pronto!</p>
-            
+        <h1 id="encabezado_intro">¡Contáctanos!</h1>
+        <section id="contenido_ppal" class="txt_contacto"  class="contenido50">
+            <article class="txt_contenido">
+                <p>En MT SUCCESS, valoramos tu interés y estamos aquí para responder a todas tus preguntas, recibir tus
+                    comentarios y ayudarte a planificar la aventura de montaña de tus sueños. Estamos comprometidos en
+                    brindarte la mejor experiencia posible, desde el momento en que nos contactas hasta que regresas de
+                    tu expedición.</p>
+                <p>No dudes en ponerte en contacto con nuestro equipo. Ya sea que necesites información adicional sobre
+                    nuestras experiencias en la montaña, detalles sobre nuestros cursos de escalada o simplemente desees
+                    comunicarte con nosotros, estamos aquí para atenderte. Utiliza el formulario de contacto a
+                    continuación o los detalles de contacto proporcionados para hablar con nosotros. Tu próxima aventura
+                    en la montaña comienza aquí. ¡Esperamos escucharte pronto!</p>
+            </article>
+            <form action="./contact.html" id="contacto" name="formulario_contacto" method="post">
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" tabindex="0" autofocus required
+                        placeholder="...escriba su nombre...">
+
+                    <label for="apellidos">Appellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" tabindex="0" required
+                        placeholder="...escriba sus apellidos...">
+
+                    <label for="fnacimiento">Fecha de nacimiento</label>
+                    <input id="fnacimiento" name="fnacimiento" tabindex="0" required type="date">
+
+                    <label for="sexo">
+                        <span id="sexo">soy:</span>
+                        <input type="radio" name="sexo" id="chico" tabindex="0">
+                        chico
+                        <input type="radio" name="sexo" id="chica" tabindex="0">
+                        chica
+                        <input type="radio" name="sexo" id="nc" tabindex="0">
+                        otros / nc
+                    </label>
+
+                    <label for="movil">Teléfono móvil</label>
+                    <input type="tel" name="movil" id="movil" tabindex="0" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                        placeholder="666 666 6666">
+
+                    <label for="mail">Correo electrónico</label>
+                    <input type="email" id="mail" name="mail" tabindex="0" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="nombre@dominio.com">
+
+                    <label for="interesado_en">Estoy interesado en</label>
+                    <select name="interesado_en" id="interesado_en" required tabindex="0">
+                        <optgroup label="ASCENSIONES" id="ascensiones">
+                            <option value="cervino" class="ascensiones">Matterhonr / Cervino</option>
+                            <option value="mont_blanc" class="ascensiones">Mont Blanc</option>
+                            <option value="k2" class="ascensiones">K2</option>
+                            <option value="everest" class="ascensiones">Everest</option>
+                        </optgroup>
+                        <optgroup label="TREKINGS" id="trekings">
+                            <option value="rocosas" class="trekings">Montañas Rocosas</option>
+                            <option value="andes" class="trekings">Los Andes</option>
+                            <option value="himalaya" class="trekings">Himalaya</option>
+                            <option value="alpes" class="trekings">Los Alpes</option>
+                        </optgroup>
+                        <optgroup label="CURSOS" id="cursos">
+                            <option value="senior" class="cursos">Adultos - 10 días</option>
+                            <option value="junior" class="cursos">Niños - 2 días</option>
+                        </optgroup>
+                    </select>
+
+                    <label for="experiencia_previa">Tengo experiencia en alta montaña</label>
+                    <input type="checkbox" id="experiencia_previa" name="experiencia_previa" tabindex="0">
+
+                    <label for="sobre_ti">Cuéntanos tus motivaciones</label>
+                    <textarea name="sobre_ti" id="sobre_ti" cols="30" rows="8"
+                        placeholder="cuéntanos tu experiencia en montaña y lo que te motiva a contactar con nosotros"></textarea>
+
+                    <input type="submit" value="ENVIAR" id="enviar" name="enviar" tabindex="0">
+                    <input type="reset" value="LIMPIAR" id="limpiar" name="limpiar" tabindex="0">
+                </fieldset>
+            </form>
         </section>
-        <form action="./contact.html" id="contacto" name="formulario_contacto" method="post">
-            <fieldset>
-                <legend>Formulario de contacto</legend>
-
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" tabindex="0" autofocus required placeholder="...escriba su nombre...">
-
-                <label for="apellidos">Appellidos</label>
-                <input type="text" id="apellidos" name="apellidos" tabindex="0" required placeholder="...escriba sus apellidos...">
-
-                <label for="fnacimiento">Fecha de nacimiento</label>
-                <input id="fnacimiento" name="fnacimiento" tabindex="0" required type="date">
-
-                <label for="sexo">
-                    <span id="sexo">soy:</span>
-                    <input type="radio" name="sexo" id="chico" tabindex="0">
-                    chico
-                    <input type="radio" name="sexo" id="chica" tabindex="0">
-                    chica
-                    <input type="radio" name="sexo" id="nc" tabindex="0">
-                    otros / nc
-                </label>
-
-                <label for="movil">Teléfono móvil</label>
-                <input type="tel" name="movil" id="movil" tabindex="0" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="666 666 6666">
-
-                <label for="mail">Correo electrónico</label>
-                <input type="email" id="mail" name="mail" tabindex="0" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="nombre@dominio.com">
-
-                <label for="interesado_en">Estoy interesado en</label>
-                <select name="interesado_en" id="interesado_en" required tabindex="0">
-                    <optgroup label="ASCENSIONES" id="ascensiones">
-                        <option value="cervino" class="ascensiones">Matterhonr / Cervino</option>
-                        <option value="mont_blanc" class="ascensiones">Mont Blanc</option>
-                        <option value="k2" class="ascensiones">K2</option>
-                        <option value="everest" class="ascensiones">Everest</option>
-                    </optgroup>
-                    <optgroup label="TREKINGS" id="trekings">
-                        <option value="rocosas" class="trekings">Montañas Rocosas</option>
-                        <option value="andes" class="trekings">Los Andes</option>
-                        <option value="himalaya" class="trekings">Himalaya</option>
-                        <option value="alpes" class="trekings">Los Alpes</option>
-                    </optgroup>
-                    <optgroup label="CURSOS" id="cursos">
-                        <option value="senior" class="cursos">Adultos - 10 días</option>
-                        <option value="junior" class="cursos">Niños - 2 días</option>
-                    </optgroup>
-                </select>
-
-                <label for="experiencia_previa">Tengo experiencia en alta montaña</label>
-                <input type="checkbox" id="experiencia_previa" name="experiencia_previa" tabindex="0">
-
-                <label for="sobre_ti">Cuéntanos tus motivaciones</label>
-                <textarea name="sobre_ti" id="sobre_ti" cols="30" rows="8" placeholder="cuéntanos tu experiencia en montaña y lo que te motiva a contactar con nosotros"></textarea>
-
-                <input type="submit" value="ENVIAR" id="enviar" name="enviar" tabindex="0">
-                <input type="reset" value="LIMPIAR" id="limpiar" name="limpiar" tabindex="0">
-            </fieldset>
-            
-        </form>
     </main>
     <footer>
         <span>Todos los montes reservados.</span>

@@ -1,3 +1,4 @@
+/*reglas generales*/
 * {
     margin: 0 auto;
     box-sizing: border-box;
@@ -9,7 +10,7 @@ body {
     background-color: #CAF0F8;
     width: 100%;
 }
-
+/*HEADER ALL PAGES*/
 header {
     position: sticky;
     top: 0;
@@ -31,12 +32,13 @@ section#nombre_page>h2 {
     text-align: left;
     display: block;
     padding: 5px;
-}
-
-section#nombre_page>h2 {
     text-transform: lowercase;
 }
 
+/* header img {
+    width: 45px;
+} */
+/*HEADER ALL PAGES - NAV TOP*/
 header>nav>ul {
     display: flex;
     flex-wrap: wrap;
@@ -60,52 +62,50 @@ header>nav>ul>li>a {
 header>nav>ul>li>a:hover {
     background-color: #00B4D8;
     transition: background-color 0.8s;
-    /* font-size: 26px; */
-    /*El cambio de tamaño con hover da problemas que no sé solucionar*/
 }
 
 header>nav>ul>li>a:not(:hover) {
-
     background-color: white;
     transition: background-color 0.8s;
-    /* font-size: 20px; */
 }
 
 header>nav>ul>li>a:active {
     background-color: yellow;
     transition: background-color 0.3s;
-    /* font-size: 26px; */
 }
 
-section#texto_intro {
-    padding: 14% 0%;
-    display: flex;
-    flex-direction: column;
+/*MAIN ALL PAGES*/
+
+main > h1{
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    background-color: yellow;
+    border-radius: 10% 90% 9% 91% / 80% 11% 89% 20%;
+    box-shadow: 0 0 15px yellow;
+    margin: 6% 6% 0% 6%;
 }
+
+section#contenido_ppal{
+    margin: 25px 0;
+    text-align: justify;
+    text-indent: 12%;
+}
+
+section#contenido_ppal > article.txt_contenido > p {
+    margin: 35px 4%;
+}
+
+/*MAIN SOMOS*/
 
 video {
     width: 100%;
 }
 
-section#texto_intro>p {
-    margin: 15px;
-    padding: 4% 8% 4% 4%;
-    text-indent: 8%;
-    text-align: justify;
-}
-
-section#texto_intro>h1#encabezado_intro {
-    font-size: 25px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: yellow;
-    border-radius: 10% 90% 9% 91% / 80% 11% 89% 20%;
-    box-shadow: 0 0 15px yellow;
-}
+/*MAIN EXPERIENCIAS*/
 
 article.experiencia {
-    border: 3px solid black;
+    border: 3px solid;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -139,24 +139,28 @@ article.curso {
     border-color: darkgreen;
 }
 
-article.experiencia_txt>span {
-    display: block;
-    margin: 0;
-    margin-left: 5px;
-    font-size: 10px;
-}
-
 h4.tipo_experiencia {
     text-transform: uppercase;
     padding-bottom: 5px;
-    margin-left: 5px;
+    margin-left: 3px;
+    text-indent: 0%;
 }
 
 h6.nombre_experiencia {
-    margin-left: 5px;
+    margin-left: 3px;
+    width: 100%;
+    text-indent: 0%;
 }
 
-img.img_bienvenida {
+article.experiencia_txt>span {
+    display: block;
+    margin: 0;
+    margin-left: 3px;
+    font-size: 10px;
+    text-indent: 0%;
+}
+
+img.img_contenido {
     width: 100%;
 }
 
@@ -166,7 +170,7 @@ img.experiencia {
     border-radius: 22px 22px 0px 22px;
 }
 
-/*formulario contacto*/
+/*MAIN CONTACTO - formulario*/
 
 form#contacto>fieldset {
     display: flex;
@@ -179,11 +183,17 @@ form#contacto>fieldset {
 
 form#contacto legend {
     font-size: 25px;
+    text-indent: 0%;
+    text-align: left;
+    width: 100%;
 }
 
 form#contacto>fieldset>label {
     margin-left: 0;
     margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
 }
 
 form#contacto>fieldset>input,
@@ -225,7 +235,8 @@ form#contacto>fieldset>select>optgroup#cursos>option {
 
 form#contacto>fieldset>input#experiencia_previa {
     width: 15px;
-    margin-left: 5%;
+    margin-left: 15%;
+    margin-top: 15px;
 }
 
 form#contacto>fieldset>input#enviar,
@@ -247,7 +258,7 @@ form#contacto>fieldset>input#limpiar:active {
 }
 
 
-/*footer todas las páginas*/
+/*FOOTER ALL PAGES*/
 
 footer {
     background-color: #00B4D8;
@@ -296,6 +307,7 @@ footer section#redes>a>img {
 MEDIA QUERY
 previo: moviles tamaño medio, 375px
 1º MQ: agrandar un poco texto tarjetas experiencias
+OKEY!
 */
 
 @media only screen and (min-width: 400px) {
@@ -308,6 +320,7 @@ previo: moviles tamaño medio, 375px
 
 /*
 2º MQ: para que no se divida el título
+OKEY!
 */
 
 @media only screen and (min-width: 642px) {
@@ -328,26 +341,31 @@ previo: moviles tamaño medio, 375px
 3º MQ: tablets
 index, somos: texto y fotos.
 experiencias: 2 tarjetas por fila.
+OKEY!
 */
 
 @media only screen and (min-width: 768px) {
-    section#texto_intro {
+    section#contenido_ppal {
+        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+    }
+
+    article.txt_contenido {
+        width: 100%;
     }
 
     article.experiencia {
         width: 49%;
     }
 
-    section#texto_intro {
+    section#contenido_ppal {
         padding: 5% 0%;
     }
 
-    section#texto_intro>p {
+    section#contenido_ppal > p {
         padding: 3% 0%;
     }
-
 }
 
 /*
@@ -358,19 +376,22 @@ contacto: 2 columnas, texto y formulario
 */
 
 @media only screen and (min-width: 1281px) {
-
-    section#texto_intro {
+    section#contenido_ppal {
         margin-right: 8%;
         margin-left: 8%;
     }
 
-    section>img.img_bienvenida {
-        width: 50%;
-        border-radius: 20px;
+    section.contenido50 {
+        display: flex;
+        flex-direction: row;
     }
 
-    video {
+    section.contenido50 > article.txt_contenido, section.contenido50 > img, section.contenido50 > video {
         width: 50%;
+    }
+/*La revisión va por aquí*/
+    section.contenido50 > img.img_contenido {
+        border-radius: 20px;
     }
 
     section.texto_contacto {
