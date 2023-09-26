@@ -6,7 +6,11 @@ Mobile First:
     - tablet, 768px
     - desktop, 1280px
 
+Fotos y video de la página NOSOTROS son propios. El resto, son de Pexels.
+Favicon de Pexels.
+
 Los textos de cada página han sido generados por CHAT GPT 3.5 a partir de los siguientes prompts:
+
     Q: quiero un texto para la pagina principal de una web de una empresa de guias de montaña. Son la élite de los guias de montaña y dan servicio en todo el mundo, incluido los Himalayas. La empresa, aparte de dar servicio como guias de montaña tanto para ascensiones como para rutas, también ofrece cursos de senderismo, alpinismo y escalada. La empresa se llama MT SUCCESS
 
     Q: Bien, la página va a tener otra página llamada 'nosotros', donde explicamos el origen de la empresa y la motivación de la misma. Contará como su fundador, Alex, recibió la afición a la montaña de su padre desde pequeño, y como eso le llevo, junto a sus amigos Iñigo y Asier a fundar la compañía.
