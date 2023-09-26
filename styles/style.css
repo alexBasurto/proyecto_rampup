@@ -212,8 +212,14 @@ form#contacto>fieldset>input:focus {
     background-color: yellow;
 }
 
-input#chico {
-    margin-left: 5%;
+span#sexo {
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+form#contacto>fieldset>input.sexo{
+    width: 10%;
+    margin-right: 65%
 }
 
 form#contacto>fieldset>textarea {

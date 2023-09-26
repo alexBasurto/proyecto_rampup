@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/normalize801.css" />
+    <link rel="stylesheet" href="../styles/normalize801.css" />
 </head>
 
 <body>
@@ -57,7 +57,7 @@
 
                     <label for="fnacimiento">Fecha de nacimiento</label>
                     <input id="fnacimiento" name="fnacimiento" tabindex="0" required type="date">
-
+<!-- 
                     <label for="sexo">
                         <span id="sexo">soy:</span>
                         <input type="radio" name="sexo" id="chico" tabindex="0">
@@ -66,7 +66,17 @@
                         chica
                         <input type="radio" name="sexo" id="nc" tabindex="0">
                         otros / nc
-                    </label>
+                    </label> -->
+                    <span id="sexo">soy:</span>
+
+                    <label for="chico" class="sexo">chico</label>
+                    <input type="radio" name="chico" id="chico" tabindex="0" class="sexo">
+                    
+                    <label for="chica" class="sexo">chica</label>
+                    <input type="radio" name="chica" id="chica" tabindex="0" class="sexo">
+                    
+                    <label for="chica" class="sexo">nc</label>
+                    <input type="radio" name="nc" id="nc" tabindex="0" class="sexo">
 
                     <label for="movil">Teléfono móvil</label>
                     <input type="tel" name="movil" id="movil" tabindex="0" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
