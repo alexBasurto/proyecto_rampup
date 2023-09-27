@@ -25,6 +25,7 @@ section#nombre_page>h1 {
     text-align: left;
     display: inline;
     padding: 5px;
+    font-size: 28px;
 }
 
 section#nombre_page>h2 {
@@ -354,6 +355,10 @@ OKEY!
         text-align: left;
         display: inline;
         padding: 5px;
+    }
+
+    section#nombre_page>h1 {
+        font-size: 30px;
     }
 
     section#texto_intro {
